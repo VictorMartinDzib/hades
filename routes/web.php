@@ -22,6 +22,10 @@ Route::get('/principal', function () {
     return view('principal');
 });
 
+Route::get('/registerempresa', function() {
+    return view('auth/register-empresa');
+});
+
 Route::get('/content', function() {
     return view('courses/content');
 });

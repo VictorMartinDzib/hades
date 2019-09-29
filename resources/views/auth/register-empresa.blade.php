@@ -5,27 +5,14 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header"> <b> {{ __('Registrate') }}</b></div>
+                <div class="card-header"> <b> {{ __('Registrar empresa') }}</b></div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nombre') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Apellidos') }}</label>
+                        
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nombre de la empresa') }}</label>
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
@@ -44,8 +31,12 @@
                             <div class="col-md-6">
                                 <select name="" id="">
                                     <option value="1">Elige</option>
-                                    <option value="2">Programación</option>
-                                    <option value="3">Ofimatica</option>
+                                    <option value="2">Turismo<option>
+                                    <option value="3">Cocina</option>
+                                    <option value="4">Mesero</option>
+                                    <option value="4">Alberquero</option>
+                                    <option value="4">Mantenimiento</option>
+
                                 </select>
                             </div>
                         </div>
@@ -92,7 +83,7 @@
                                     {{ __('Registrar') }}
                                 </button>
 
-                                <a href="register-empresa" class="btn btn-success">Soy una empresa</a>
+                                <a href="" class="btn btn-success">Soy una empresa</a>
                             </div>
                         </div>
                     </form>
