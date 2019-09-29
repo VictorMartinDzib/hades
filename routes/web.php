@@ -14,6 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/bolsa', function () {
+    return view('jobs/list');
+});
+
 Route::get('/principal', function () {
     return view('principal');
 });
@@ -30,3 +34,5 @@ Route::group(['prefix' => 'admin'], function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('empleos','EmpleosController');

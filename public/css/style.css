@@ -9,3 +9,7 @@
 .btn-primary:hover{
       background: #821435;
 }
+
+a, button{
+      text-decoration: none;
+}
